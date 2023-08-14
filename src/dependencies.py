@@ -7,6 +7,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+%matplotlib inline
 import plotly.graph_objs as go
 from scipy.stats import skew, kurtosis
 from IPython.display import Audio

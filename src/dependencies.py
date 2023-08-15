@@ -7,7 +7,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-%matplotlib inline
 import plotly.graph_objs as go
 from scipy.stats import skew, kurtosis
 from IPython.display import Audio
@@ -19,6 +18,8 @@ import tensorflow as tf
 from tensorflow import keras
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+from scipy.stats import zscore
+from scipy.stats import iqr
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline

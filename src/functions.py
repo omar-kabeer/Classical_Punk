@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import librosa
 import os
 from scipy.stats import skew, kurtosis
+import librosa
+from IPython.display import Audio
 
 def count_values_above_mean(values):
     """
@@ -259,3 +261,18 @@ def process_list(value):
     values = value.split()  # Split the string into a list of values
     cleaned_values = [float(val) for val in values if val != '...']  # Convert to float, excluding '...'
     return cleaned_values
+
+def play_audio(genre, num):
+    """
+    Generate a short audio clip of a specific genre.
+
+    Args:
+        genre (str): The genre of the audio clip.
+        num (int): The number of the audio clip within the genre.
+
+    Returns:
+        Audio: The audio clip as a `Audio` object.
+    """
+    audio = f'../data/genres/{genre}/{genre}.{num}.wav'
+    data, sr = librosa.load(audio)
+    return Audio(data, rate=sr)
